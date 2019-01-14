@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Super Mario Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <!-- Favicon Link-->
+    <link rel="shortcut icon" href="Star.ico" type="image/x-icon"> 
+    
+</head>
+<body>
+
+    <div class="background">
+        <form id="weather-form">
+            <div class="input-group">
+                <div class="searchBar">
+                    <input class="input-address searchBarText" type = "text" placeholder="Enter Address" />
+                    <button type="submit" class="button"></button>
+                </div>
+            </div>    
+            <div class="tempData"></div>
+            <div class="worldData"></div>
+            <div class="weatherData"></div>
+            <div class="timeData"></div>
+            <div class="dateData"></div>
+            <div class="musicBox"></div>
+        </form>
+    </div>
+
+    <!-- Audio Files -->
+    
+    <audio loop id="one"  src="tunes/1.wav"></audio>
+    <audio loop id="two"  src="tunes/2.wav"></audio>
+    <audio loop id="three"  src="tunes/3.wav"></audio>
+    <audio loop id="four"  src="tunes/4.wav"></audio>
+    <audio loop id="five"  src="tunes/5.wav"></audio>
+    <audio loop id="six"  src="tunes/6.wav"></audio>
+    <audio loop id="seven"  src="tunes/7.wav"></audio>
+    
+   
+    
+     <!-- Hide API ID from GitHub -->
+    <script src="config.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- My JS -->
+    <script src="script.js"></script>
+</body>
+</html>
