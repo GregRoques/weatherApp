@@ -109,7 +109,7 @@ $('#weather-form').submit((e)=>{
                     const locOffset = dtData.rawOffset
                     // console.log(daylightOffset)
                     // console.log(locOffset)
-                    offsetData = (daylightOffset * 1000) + (locOffset * 1000)
+                    offsetData =  (locOffset * 1000) + (daylightOffset * 1000)
 
                     // animate Time
                     animateTime(offsetData)
@@ -171,13 +171,13 @@ function animateWeather(weatherOutside,weatherDescription){
 
     function animateTime(timeOffset){
 
-        let timeNow = (new Date().valueOf()) + timeOffset;
+        let timeNow = ((new Date().valueOf()) + timeOffset) + 18000000;
         let readableTimeNow = (new Date(timeNow));
         // console.log(readableTimeNow)
         let timeString = readableTimeNow.toTimeString().split(" ")
         let theTime = timeString[0].split(":")
 
-        let hour = Number.parseInt(theTime[0]) + 5 
+        let hour = Number.parseInt(theTime[0]) 
         let min = theTime[1]
         let amPm 
 
@@ -203,7 +203,7 @@ function animateWeather(weatherOutside,weatherDescription){
     
        function animateDate(dateOffset){
 
-        let dateNow = (new Date().valueOf()) + dateOffset;
+        let dateNow = ((new Date().valueOf()) + dateOffset) + 18000000;
         let readableDateNow = (new Date(dateNow));
         let dateString = readableDateNow.toDateString().split(" ")
         
