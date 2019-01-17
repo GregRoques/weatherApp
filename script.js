@@ -90,6 +90,7 @@ $('#weather-form').submit((e)=>{
                     // document.querySelector('.gameBox').style.backgroundImage = `url('gameBoxes/${imageNumber}.jpg')`
                     document.querySelector('.gameBox').innerHTML= `<a href='${hrefArray[imageNumber]}' target='_blank'>
                                                                     <img src= gameBoxes/${imageNumber}.jpg></a>`
+                    document.querySelector('.gameBox').style= `box-shadow: 0px 0px 2px black, 0 0 25px blue, 0 0 5px darkblue;`
                    
             }
 

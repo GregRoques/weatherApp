@@ -299,11 +299,15 @@ body{
     animation: gameBox 100s infinite;
     top: 425px;
     left: 600px;
-    width: 150px;
-    height:150px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center;
+    background-size: auto; 
+    
+}
 
+img{
+    display:block;
+    
 }
 
 @keyframes gameBox{
@@ -311,16 +315,20 @@ body{
         transform: scale(0);
     }
     4%{
-        transform: scale(1);    
+        transform: scale(0);       
     }
-    10%{
+    7%{
+        transform: scale(1);  
+    }
+    12%{
         transform: scale(1);    
     }  
-    14%{
+    17%{
         transform: scale(0);    
     }  
-    15%,100%{
+    18%,100%{
         transform: scale(0);
     }
 }
+
 
