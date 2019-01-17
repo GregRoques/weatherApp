@@ -72,6 +72,27 @@ $('#weather-form').submit((e)=>{
                     let myDate = new Date( dt *1000);
                     // let myToday = myDate.toLocaleString().split(`,`);
                     // console.log(myToday)
+
+            // =========== functions for TempBack
+
+            function specGame(imageNumber){
+                
+                const hrefArray = {
+                    one: `https://en.wikipedia.org/wiki/Super_Mario_Bros._3`,
+                    two: `https://en.wikipedia.org/wiki/Super_Mario_64` ,
+                    three: `https://en.wikipedia.org/wiki/Super_Mario_World` ,
+                    four: `https://en.wikipedia.org/wiki/Super_Mario_Bros.`,
+                    five: `https://en.wikipedia.org/wiki/Super_Mario_All-Stars`,
+                    six: `https://en.wikipedia.org/wiki/Super_Mario_Bros.`,
+                    seven: 'https://en.wikipedia.org/wiki/Super_Mario_Bros._2' ,
+                }                
+                    console.log(hrefArray[imageNumber])
+                    // document.querySelector('.gameBox').style.backgroundImage = `url('gameBoxes/${imageNumber}.jpg')`
+                    document.querySelector('.gameBox').innerHTML= `<a href='${hrefArray[imageNumber]}' target='_blank'>
+                                                                    <img src= gameBoxes/${imageNumber}.jpg></a>`
+                   
+            }
+
                 
                 
             //    ======================= Weather Animation Implementation
@@ -84,7 +105,7 @@ $('#weather-form').submit((e)=>{
                 animateTemp(currTemp)
                 setInterval("animateTemp(currTemp)",11800000)
 
-                tempBackground(currTemp)
+                tempBackground(currTemp, specGame)
                 setInterval("tempBackground(currTemp)",11800000)
                 
 
@@ -103,7 +124,7 @@ $('#weather-form').submit((e)=>{
                 currDateAndTime = (new Date().valueOf())/1000
 
                 dtURL =`https://maps.googleapis.com/maps/api/timezone/json?location=${searchLat},${searchLon}&timestamp=${currDateAndTime}&key=${timeZoneKey}`
-                console.log(dtURL)
+                // console.log(dtURL)
                 $.getJSON(dtURL,(dtData)=>{   
                     const daylightOffset = dtData.dstOffset
                     const locOffset = dtData.rawOffset
@@ -242,39 +263,46 @@ function animateWeather(weatherOutside,weatherDescription){
       // ========================================================================================= Change Background for Temp
 
    
-    function tempBackground(degree){
+    function tempBackground(degree, marioGame){
         let musicKey   
         if ( degree > 95){
             document.querySelector('.background').style.backgroundImage = "url('tempBack/6.jpg')";
             document.getElementById("six").play();
             musicKey = "six";
+            marioGame("six");
         }else if (degree <= 95 && degree > 80) {
             document.querySelector('.background').style.backgroundImage = "url('tempBack/5.jpg')";
             document.getElementById("five").play();
             musicKey = "five";
+            marioGame("five");
         }else if (degree <=80 && degree > 68) {
             document.querySelector('.background').style.backgroundImage = "url('tempBack/7.jpg')";
             document.getElementById("seven").play();
             musicKey = "seven";
+            marioGame("seven");
         }else if (degree <=68 && degree > 58) {
             document.querySelector('.background').style.backgroundImage = "url('tempBack/4.jpg')";
             document.getElementById("four").play();
             musicKey = "four";
+            marioGame("four");
         }else if (degree <=58 && degree > 48) {
             document.querySelector('.background').style.backgroundImage = "url('tempBack/3.jpg')";
             document.getElementById("three").play()
             musicKey = "three";
+            marioGame(`three`);
         } else if (degree <=48 && degree > 32) {
             document.querySelector('.background').style.backgroundImage = "url('tempBack/2.jpg')";
             document.getElementById("two").play();
             musicKey = "two";
+            marioGame("two");
         } else{
             document.querySelector('.background').style.backgroundImage = "url('tempBack/1.jpg')";
             document.getElementById("one").play();
             musicKey = "one";
+            marioGame("one");
         }
 
-
+          
         
             const musicBoxClass = document.querySelector('.musicBox')
             musicBoxClass.style.backgroundImage = "url('noteBlock.png')";
@@ -286,7 +314,7 @@ function animateWeather(weatherOutside,weatherDescription){
                 if(click % 2 != 0){
                     // musicBoxClass.style.animation = "none"
                     musicBoxClass.style.animationPlayState = "paused"
-                    document.getElementById(musicKey ).pause()
+                    document.getElementById(musicKey).pause()
                     
                 }else{
                     // musicBoxClass.style.animation = "musicBox 6s infinite"
@@ -300,29 +328,7 @@ function animateWeather(weatherOutside,weatherDescription){
 
     }
 
-    // ======================================================================================================= Music Pause
-
-    // function musicPause(musicKey){
-        
-    //     const musicBoxClass = document.querySelector('.musicBox')
-    //     musicBoxClass.style.backgroundImage = "url('noteBlock.png')";
-
-
-    //     click = 0
-    //     function addClick(){
-    //         click++
-    //         if(click % 2 != 0){
-    //             // musicBoxClass.style.animation = "none"
-    //             musicBoxClass.style.animationPlayState = "paused"
-    //             document.getElementById(musicKey).pause()
-                
-    //         }else{
-    //             // musicBoxClass.style.animation = "musicBox 6s infinite"
-    //             musicBoxClass.style.animationPlayState = "running"
-    //             document.getElementById(musicKey).play()
-    //         }
-    //     }
-    //     musicBoxClass.onclick = function() {addClick()};
+  
 
     
 
