@@ -1,5 +1,3 @@
-# Super Mario Weather App
-
 ## Contents
 * Description
 * Features
