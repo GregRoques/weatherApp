@@ -324,21 +324,5 @@ function animateWeather(weatherOutside,weatherDescription){
                 }
             }
             musicBoxClass.onclick = function() {addClick()};
-            
-        
-
     }
-
-  
-
-    
-
-
-
-
-    
-
-
-
-
 

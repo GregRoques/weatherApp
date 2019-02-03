@@ -10,19 +10,23 @@
 }
 
 /* ======================================================= Body and Background Image */
-body{
-    height: 600px;
-    width: 800px;
-}
+/* body{
+ 
+} */
 
 .background{
-    height: 600px;
-    width: 800px;
+    /* position: relative;
+    height:100vh;
+    width: 100vw;
+    max-height: 600px;
+    max-width: 800px; */
+    height:600px;
+    width:800px;
     background-image: url('intro.jpg') ;
+    /* background-size:contain; */
     background-repeat: no-repeat;
-
-   
 }
+
 
 /* ============================================================= Zip Code Search Bar and Coin Button */
 
