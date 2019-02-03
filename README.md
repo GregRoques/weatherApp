@@ -177,7 +177,7 @@ Make screen size responsive.
 
 ## Authors
 * Greg Roques
- - [GitHub Profile](https://github.com/GregRoques)
+      * [GitHub Profile](https://github.com/GregRoques)
 
 
 ## Screenshots
