@@ -335,4 +335,70 @@ img{
     }
 }
 
+/* ============================================================== Media Query Resizing */
 
+@media only screen and (max-width: 799px) {
+    .background{
+        transform: scale(0.9);
+        transform-origin: top left;
+    }
+} 
+@media only screen and (max-width: 736px) {
+    .background{
+        transform: scale(0.85);
+        transform-origin: top left;
+    }
+} 
+
+@media only screen and (max-width: 700px) {
+    .background{
+        transform: scale(0.8);
+        transform-origin: top left;
+    }
+} 
+
+@media only screen and (max-width: 648px) {
+    .background{
+        transform: scale(0.75);
+        transform-origin: top left;
+    }
+} 
+@media only screen and (max-width: 608px) {
+    .background{
+        transform: scale(0.7);
+        transform-origin: top left;
+    }
+} 
+@media only screen and (max-width: 568px) {
+    .background{
+        transform: scale(0.65);
+        transform-origin: top left;
+    }
+} 
+
+@media only screen and (max-width: 529px) {
+    .background{
+        transform: scale(0.6);
+        transform-origin: top left;
+    }
+} 
+
+@media only screen and (max-width: 488px) {
+    .background{
+        transform: scale(0.55);
+        transform-origin: top left;
+    }
+} 
+
+@media only screen and (max-width: 448px) {
+    .background{
+        transform: scale(0.5);
+        transform-origin: top left;
+    }
+} 
+@media only screen and (max-width: 408px) {
+    .background{
+        transform: scale(0.45);
+        transform-origin: top left;
+    }
+} 
