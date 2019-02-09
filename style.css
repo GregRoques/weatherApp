@@ -38,10 +38,10 @@
     border: solid gray 0.5px;
     border-radius: 3%;
     
-    width: 180px;
-    height: 20px;
+    width: 285px;
+    height: 30px;
     
-    left: 470px;
+    left: 415px;
     top: 400px;
     text-align: left; 
     
@@ -51,10 +51,10 @@
     
     background-color: transparent;
     border: transparent;
-    width:173px;
-    height: 18px;
+    width:278px;
+    height: 28px;
     font-family: Mario1;
-    font-size: 12px;
+    font-size: 14px;
     color: goldenrod;
     padding-left: 5px;
     
@@ -73,14 +73,14 @@
 
 .button{
     position: relative;
-    top:10px;
+    top:15px;
     background-image: url('questionBloack.png') ;
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;  
-    width: 50px;
-    height:50px;
-    left: 65px;
+    width: 75px;
+    height:75px;
+    left: 105px;
     transition: all 1s;
 }
 
@@ -98,25 +98,22 @@
 
 .theTempPosition{
     display: inline-block;
-    position: relative;
+    position: absolute;
     width:150px;
-    top: 15px;
+    top: 25px;
     left: 15px;
     text-align: center;
     
 }
 
-.theTemperature2{
-    display: inline-block;
-    position: relative;
-    
-}
+
 
 .theTemperature{
     font-family: Mario2;
     font-size: 18px;
     color:red;
     text-shadow: 2px 2px 1px rgba(0,0,0, 0.75);
+    position: relative;
 }
 
 .theTempLine1{
@@ -124,13 +121,15 @@
     font-size: 9px;
     color: white;
     -webkit-text-stroke: 0.75px black;
+    position: relative;
 }
 
 .theTempLine2{
     font-family: Mario1;
-    font-size: 14px;
+    font-size: 18px;
     color: white;
     -webkit-text-stroke: 0.5px black;
+    position: relative;
 }
 
 /* =========================================================================== Weather Square */
@@ -193,7 +192,7 @@
 .time2{
     position: relative;
     font-family: Mario1;
-    font-size: 14px;
+    font-size: 18px;
     color: white;
     -webkit-text-stroke: 0.75px black;
 }
@@ -202,7 +201,7 @@
     position: relative;
     font-family: Mario1;
     text-transform: lowercase;
-    font-size: 12px;
+    font-size: 14px;
     color: white;
     -webkit-text-stroke: 0.75px black;
 }
@@ -214,7 +213,7 @@
     position: absolute;
     text-align: center;
     top: 25px;
-    left: 685px;
+    left: 665px;
     width: 125px;
     
 
@@ -229,7 +228,7 @@
 
 .date2{
     font-family: Mario1;
-    font-size: 14px;
+    font-size: 18px;
     color: white;
     -webkit-text-stroke: 0.75px black;
 }
@@ -241,8 +240,8 @@
     display: inline-block;
     position: absolute;
     top: 25px;
-    left: 200px;
-    width: 150px;
+    left: 180px;
+    width: 200px;
     text-align: center;
 
 }
@@ -256,7 +255,7 @@
 
 .world2{
     font-family: Mario1;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     padding-top: 5px;
     -webkit-text-stroke: 0.75px black;
@@ -335,70 +334,3 @@ img{
     }
 }
 
-/* ============================================================== Media Query Resizing */
-
-@media only screen and (max-width: 799px) {
-    .background{
-        transform: scale(0.9);
-        transform-origin: top left;
-    }
-} 
-@media only screen and (max-width: 736px) {
-    .background{
-        transform: scale(0.85);
-        transform-origin: top left;
-    }
-} 
-
-@media only screen and (max-width: 700px) {
-    .background{
-        transform: scale(0.8);
-        transform-origin: top left;
-    }
-} 
-
-@media only screen and (max-width: 648px) {
-    .background{
-        transform: scale(0.75);
-        transform-origin: top left;
-    }
-} 
-@media only screen and (max-width: 608px) {
-    .background{
-        transform: scale(0.7);
-        transform-origin: top left;
-    }
-} 
-@media only screen and (max-width: 568px) {
-    .background{
-        transform: scale(0.65);
-        transform-origin: top left;
-    }
-} 
-
-@media only screen and (max-width: 529px) {
-    .background{
-        transform: scale(0.6);
-        transform-origin: top left;
-    }
-} 
-
-@media only screen and (max-width: 488px) {
-    .background{
-        transform: scale(0.55);
-        transform-origin: top left;
-    }
-} 
-
-@media only screen and (max-width: 448px) {
-    .background{
-        transform: scale(0.5);
-        transform-origin: top left;
-    }
-} 
-@media only screen and (max-width: 408px) {
-    .background{
-        transform: scale(0.45);
-        transform-origin: top left;
-    }
-} 

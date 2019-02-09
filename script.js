@@ -326,3 +326,13 @@ function animateWeather(weatherOutside,weatherDescription){
             musicBoxClass.onclick = function() {addClick()};
     }
 
+// ========================================================== Background Resize
+
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth < 800){
+        let x = (window.innerWidth/800)
+        document.querySelector('body').style = `transform: scale(${x}); transform-origin: top left; margin:0px`
+        console.log(x)
+    }
+  });
