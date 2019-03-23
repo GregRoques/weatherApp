@@ -39,6 +39,7 @@ $('#weather-form').submit((e)=>{
           let searchLat;
           let searchLon;
           let searchCoordinates;
+         
           $.getJSON(addressToCordinatesUrl,(coridinateData)=>{   
               searchLat =  coridinateData.results[0].geometry.location.lat;
               searchLon =  coridinateData.results[0].geometry.location.lng;
@@ -112,6 +113,7 @@ $('#weather-form').submit((e)=>{
 
                 // animate world(city)
                 animateWorld(`${weatherData.name}`)
+                console.log(weatherData.name)
                 setInterval("animateWorld(`${weatherData.name}`)",11800000)
                
 
@@ -129,7 +131,7 @@ $('#weather-form').submit((e)=>{
                 $.getJSON(dtURL,(dtData)=>{   
                     const daylightOffset = dtData.dstOffset
                     const locOffset = dtData.rawOffset
-                    // console.log(daylightOffset)
+                    console.log(daylightOffset)
                     // console.log(locOffset)
                     offsetData =  (locOffset * 1000) + (daylightOffset * 1000)
 
@@ -193,7 +195,7 @@ function animateWeather(weatherOutside,weatherDescription){
 
     function animateTime(timeOffset){
 
-        let timeNow = ((new Date().valueOf()) + timeOffset) + 18000000;
+        let timeNow = ((new Date().valueOf()) + timeOffset) + 14400000;
         let readableTimeNow = (new Date(timeNow));
         // console.log(readableTimeNow)
         let timeString = readableTimeNow.toTimeString().split(" ")
